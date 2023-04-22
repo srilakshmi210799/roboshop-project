@@ -1,4 +1,4 @@
-echo -e "/e[36m>>>>>>>>configure nodejs>>>>>>>/e[0m"
+echo -e "\e[36m>>>>>>>>configure nodejs>>>>>>>\e[0m"
 curl -sL https://rpm.nodesource.com/setup_lts.x | bash
 yum install nodejs -y
 useradd roboshop
@@ -11,7 +11,7 @@ npm install
 cp catalogue.service /etc/systemd/system/catalogue.service
 systemctl daemon-reload
 systemctl enable catalogue
-systemctl start catalogue
+systemctl restart catalogue
 cp mongo.repo /etc/yum.repos.d/mongo.repo
 yum install mongodb-org-shell -y
 mongo --host mongodb.srdevops.online </app/schema/catalogue.js
