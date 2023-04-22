@@ -12,7 +12,7 @@ curl -o /tmp/catalogue.zip https://roboshop-artifacts.s3.amazonaws.com/catalogue
 cd /app
 echo -e "\e[36m<<<<<<<<<<<unzip app content>>>>>>>>>>\e[0m"
 unzip /tmp/catalogue.zip
-cd /app
+
 echo -e "\e[36m<<<<<<<<install nodejs dependencies>>>>>>>>>\e[0m"
 npm install
 echo -e "\e[36m<<<<<<<copy catalouge systemd file>>>>>>>\e[0m"
